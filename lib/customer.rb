@@ -1,3 +1,5 @@
+require 'pry'
+
 class Customer
     attr_accessor :name, :age
   
@@ -16,6 +18,7 @@ class Customer
     def meals
       Meal.all.select do |meal|
         meal.customer == self
+        binding.pry
       end
     end
   
