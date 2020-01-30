@@ -18,7 +18,6 @@ class Customer
     def meals
       Meal.all.select do |meal|
         meal.customer == self
-        binding.pry
       end
     end
   
